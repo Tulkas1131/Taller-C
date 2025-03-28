@@ -1,8 +1,8 @@
-/#include <stdio.h> // Con esta Bibiloteca podemos Imprimir y leer datos
+#include <stdio.h> // Con esta Bibiloteca podemos Imprimir y leer datos
 
     //Declarar las funciones
 
-    void ingresaPalabra(char palabra[]); //recibe la palabra
+void ingresaPalabra(char palabra[]); //recibe la palabra
 int ingresaNumero(); // devuelve numero
 void ingresaFecha(int *dia, int *mes, int *anio); // modifica valores
 void mostrarDatos(char palabra[], int numero, int dia, int mes, int anio);
@@ -27,6 +27,7 @@ int main() {
 void ingresaPalabra(char palabra[]) {
     printf("Ingresar una palabra (maximo 10 letras): ");
     scanf("%10s", palabra);
+    while (getchar() != '\n');
 }
 
 // ingresaNumero verifica que el numero este dentro del rango
